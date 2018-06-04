@@ -1,0 +1,120 @@
+%  --------------------------- BASICS
+\usepackage[utf8]{inputenc}
+\usepackage{newclude}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage[nodayofweek,level]{datetime}
+
+% Determines culturally dependent typographical (and other) rules
+\usepackage[english]{babel} 
+
+% Inclusion of graphics
+\usepackage{graphics}
+\usepackage{graphicx}
+
+% Rotation of figures and tables with their captions
+\usepackage{rotating}
+
+% Provides clean tables using \toprule \midrule and \bottomrule
+\usepackage{booktabs}
+
+% Allows writing tables that continue to next page
+\usepackage{longtable}
+
+% Adds tabularx environment
+\usepackage{tabularx}
+
+% Inclusion of external multi-page PDF documents
+\usepackage{pdfpages}
+
+% Inline and display quotations like \blockquote
+\usepackage{csquotes}
+
+% Use \say{Something} to typeset quotations
+\usepackage{dirtytalk}
+
+% Display code
+\usepackage{listings}
+
+% Reference to an object by its name (Title or Label)
+\usepackage{nameref}
+
+% --------------------------- FANCY AUTHOR STUFF
+
+% Add fancy quotation at start or end of section
+% \usepackage{epigraph}
+
+% Automatically generate Lorem Ipsum by using \lipsum
+\usepackage{lipsum}
+
+% Typographical perfection
+\usepackage{microtype}
+
+% Fancy headers on pages
+\usepackage{fancyhdr}
+
+\usepackage{setspace}
+
+% Powerful tool to create graphic elements in Latex
+\usepackage{tikz}
+
+% Provides a \ul command. Wavy underlining and striking out words
+% \usepackage[normalem]{ulem}
+
+% --------------------------- CUSTOMISATION
+% Provides user control over enumerate, itemize and description
+\usepackage{enumitem}
+
+% Change page layout in middle of document and check typesetting on odd and even pages
+% \usepackage{changepage}
+
+% Formatting titles of appendices
+\usepackage[titletoc,page]{appendix}
+
+% Modifies the margins and rotates page contents but not the page number
+\usepackage{lscape}
+
+% Records value of any counter (like chapter number)
+% \usepackage{totcount}
+% \regtotcounter{chapter}
+
+% Give links colours
+\usepackage[colorlinks = false, % set to true to color links
+            linkcolor = black,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{cleveref}
+\usepackage{svg}
+
+% Provides ways of customising captions
+\usepackage[font=small,labelfont=bf]{caption}
+
+% Captions for subfigures
+\usepackage[labelformat=simple]{subcaption}
+
+% --------------------------- BIBLIOGRAPHY AND GLOSSARIES
+
+\usepackage[backend=biber,
+            bibencoding=utf8,
+            maxcitenames=1,
+            style=bwl-FU, % style=ieee if preferred
+            natbib=true,
+            %sorting=none
+            ]{biblatex}
+
+% Automatically add bibliography/index/contents to the TOC
+\usepackage{tocbibind}
+
+\usepackage[acronym, toc, sort=use]{glossaries}
+
+
+% --------------------------- GRAPHICS
+
+\graphicspath{ {figs/} }
+
+% Uncomment the following to get warnings when any elements with a \label haven't been referenced:
+% \usepackage{refcheck}

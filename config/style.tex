@@ -1,0 +1,74 @@
+% Things concerning the style of things
+
+% Capitalise chapter/section/subsection when using \autoref
+\addto\extrasenglish{%
+  \renewcommand{\chapterautorefname}{Chapter}%
+}
+
+\addto\extrasenglish{%
+  \renewcommand{\sectionautorefname}{Section}%
+}
+
+\addto\extrasenglish{%
+  \renewcommand{\subsectionautorefname}{Section}%
+}
+
+\addto\extrasenglish{%
+  \renewcommand{\subsubsectionautorefname}{Section}%
+}
+
+\renewcommand\thesubfigure{(\alph{subfigure})}
+
+\newcommand*{\Appendixautorefname}{Appendix}
+
+% Stylise paragraphs
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+% Set margins ---- MINIMUM 20MM --- inner 35mm
+\usepackage[top=25mm,bottom=40mm,outer=25mm,inner=35mm]{geometry}
+
+% NTNU TEMPLATE
+% The following commands make the thesis look more like the NTNU template (with exceptions)
+% Fancy chapter titles
+\usepackage[Lenny]{fncychap}
+\ChTitleVar{\Huge\rm\bfseries}
+
+% Large Abstract/Preface/Acknowledgments titles
+\renewenvironment{abstract}{\chapter*{\abstractname}}{}
+
+% fancyhdr height of header
+\addtolength{\headheight}{\baselineskip}
+\usepackage{tocbibind}
+% CODE
+
+\definecolor{codecomment}{rgb}{0.78,0.35,0.37}
+\definecolor{codegray}{rgb}{0.97,0.97,0.97}
+
+\lstdefinestyle{custom_code_style}{
+backgroundcolor = \color{codegray},
+basicstyle= \footnotesize\ttfamily,
+breaklines = true,
+breakatwhitespace = true,
+commentstyle=\color{codecomment},
+frame = single,
+rulecolor=\color{black},
+title = \lstname
+}
+
+\lstset{style=custom_code_style, escapechar=\%}
+
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{1}
+
+% TODO NOTES
+% Use \todo{Note} or \todo[inline]{Note} to add a todo note
+\usepackage{todonotes} % [disable] to hide them
+
+% \todoquestion{Question} to add a yellow question box
+\newcommand{\todoquestion}[2][]
+{\todo[color=yellow, #1]{#2}}
+
+% \todofeedback{Feedback} to add feedback from supervisor
+\newcommand{\todofeedback}[2][]
+{\todo[color=red, #1]{#2}}

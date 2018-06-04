@@ -1,0 +1,47 @@
+% \documentclass[12pt, a4paper, openright]{report} % Change to this to save paper when drafting
+\documentclass[12pt, a4paper, twoside, openright, notitlepage]{report} % Twoside openright for final submission!
+
+\input{config/config}
+\input{config/style} 
+
+\DefineBibliographyStrings{english}{
+    bibliography = {References}, % name the Bibtex references
+}
+\addbibresource{mendeley.bib} % Tip: Use mendeley.com for reference handling. 
+
+\include{refs/acronyms}
+\include{refs/glossary}
+\makeglossaries
+
+\begin{document}
+
+    % \listoftodos % Uncomment to list \todo records in document
+    \pagenumbering{roman}
+    \include{preface/abstract}
+    \include{preface/acknowledgements}
+
+    \thispagestyle{empty}
+    
+    \tableofcontents
+
+    \listoffigures
+
+    \listoftables
+
+    \printglossaries
+
+    \clearpage
+    
+    \pagenumbering{arabic}
+    \pagestyle{fancy}
+    \fancyhead[L]{}
+
+    \include{chapters/main} 
+    
+    \printbibliography[heading=bibintoc]
+
+    \include{appendices/main}
+    
+\end{document}
+
+    
